@@ -31,13 +31,13 @@ environment :dev do
   # dev mode.
   set dev_mode: true
   set include_erts: false
-  set cookie: :"a]W7Kkh~35[}P&we8Vk!pppF!af;XH>82J8Wxep*GH@l!.]9qz341}ncHx3;i%5:"
+  set cookie: :"!9FV5*U?<&fhg?b=vkGcV04XKZ!H6mDY>xoM:!,z,<&Ch_cPH6yx^HuliWO[N&e8"
 end
 
 environment :prod do
   set include_erts: true
   set include_src: false
-  set cookie: :"jZbqQZT/2bBKHZVuGpE~F$eQrG/N0.W1>3p4L$Pw|m%pQAm/:iSl3Gt~M0YuXaE<"
+  set cookie: :"G?=iCqh86)rdQRT]}r]>GKn&l`Ef{s6sAz(C|[k)gAo:1$;6YX]0NZDJE:Cq)Kc."
 end
 
 # You may define one or more releases in this file.
@@ -45,8 +45,8 @@ end
 # when running `mix release`, the first release in the file
 # will be used by default
 
-release :snitch do
-  set version: current_version(:snitch_api)
+release :avia do
+  set version: "0.1.0"
   set applications: [
     :runtime_tools,
     admin_app: :permanent,
@@ -54,10 +54,5 @@ release :snitch do
     snitch_api: :permanent,
     snitch_core: :permanent
   ]
-  set commands: [
-    seed: "rel/commands/seed.sh",
-  ]
-  set pre_start_hooks: "rel/hooks/pre_start"
-  set post_start_hooks: "rel/hooks/post_start"
 end
 

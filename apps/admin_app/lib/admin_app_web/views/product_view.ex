@@ -5,7 +5,7 @@ defmodule AdminAppWeb.ProductView do
   alias Snitch.Repo
   import Ecto.Query
 
-  @currencies ["USD", "INR"]
+  @currencies ["USD", "IDR"]
 
   def get_image_url(images) do
     image = images |> List.first()
