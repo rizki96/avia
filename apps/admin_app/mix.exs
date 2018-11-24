@@ -23,7 +23,7 @@ defmodule AdminApp.Mixfile do
   def application do
     [
       mod: {AdminApp.Application, []},
-      extra_applications: [:logger, :runtime_tools, :pdf_generator, :sentry]
+      extra_applications: [:logger, :runtime_tools, :pdf_generator]
     ]
   end
 
@@ -53,7 +53,7 @@ defmodule AdminApp.Mixfile do
       {:gen_smtp, "~> 0.12"},
       {:snitch_payments, github: "aviacommerce/avia_payments", branch: "develop"},
       {:pdf_generator, ">=0.3.7"},
-      {:sentry, "~> 7.0"},
+      #{:sentry, "~> 7.0"},
       {:jason, "~> 1.1"}
     ]
   end

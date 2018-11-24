@@ -1,6 +1,6 @@
 defmodule AdminAppWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :admin_app
-  use Sentry.Phoenix.Endpoint
+  #use Sentry.Phoenix.Endpoint
 
   socket("/socket", AdminAppWeb.UserSocket)
 
@@ -13,7 +13,7 @@ defmodule AdminAppWeb.Endpoint do
     at: "/",
     from: :admin_app,
     gzip: true,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+    only: ~w(css fonts images js uploads favicon.ico robots.txt)
   )
 
   # Serve the images saved in the upload folder.

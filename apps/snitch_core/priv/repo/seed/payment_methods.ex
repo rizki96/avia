@@ -21,8 +21,15 @@ defmodule Snitch.Seed.PaymentMethods do
   def seed!() do
     methods = [
       %{
-        name: "check",
-        code: "chk",
+        name: "cash",
+        code: "csh",
+        active?: true,
+        inserted_at: Ecto.DateTime.utc(),
+        updated_at: Ecto.DateTime.utc()
+      },
+      %{
+        name: "transfer",
+        code: "trf",
         active?: true,
         inserted_at: Ecto.DateTime.utc(),
         updated_at: Ecto.DateTime.utc()

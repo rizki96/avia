@@ -63,34 +63,34 @@ defmodule SnitchApiWeb.HostedPaymentController do
   end
 
   defp payubiz_params_setup(params) do
-    source = Provider.provider(:payubiz)
-    query_string = "?order_id=#{params["order_id"]}&payment_id=#{params["payment_id"]}"
-    surl = @base_url <> "#{source}/success" <> query_string
-    furl = @base_url <> "#{source}/success" <> query_string
-    preferences = HostedPayment.get_payment_preferences(params["payment_method_id"])
-    urls = PayuBiz.get_url()
+    #source = Provider.provider(:payubiz)
+    #query_string = "?order_id=#{params["order_id"]}&payment_id=#{params["payment_id"]}"
+    #surl = @base_url <> "#{source}/success" <> query_string
+    #furl = @base_url <> "#{source}/success" <> query_string
+    #preferences = HostedPayment.get_payment_preferences(params["payment_method_id"])
+    #urls = PayuBiz.get_url()
 
-    url =
-      case preferences[:live_mode] do
-        true ->
-          Map.get(urls, :live_url)
+    #url =
+    #  case preferences[:live_mode] do
+    #    true ->
+    #      Map.get(urls, :live_url)
 
-        false ->
-          Map.get(urls, :test_url)
-      end
+    #    false ->
+    #      Map.get(urls, :test_url)
+    #  end
 
-    key = preferences[:credentials]["merchant_key"]
-    salt = preferences[:credentials]["salt"]
+    #key = preferences[:credentials]["merchant_key"]
+    #salt = preferences[:credentials]["salt"]
 
-    params =
-      params
-      |> Map.put("surl", surl)
-      |> Map.put("furl", furl)
-      |> Map.put("key", key)
-      |> Map.put("salt", salt)
-      |> create_payubiz_params()
+    #params =
+    #  params
+    #  |> Map.put("surl", surl)
+    #  |> Map.put("furl", furl)
+    #  |> Map.put("key", key)
+    #  |> Map.put("salt", salt)
+    #  |> create_payubiz_params()
 
-    {params, url}
+    #{params, url}
   end
 
   defp create_payubiz_params(params) do

@@ -7,6 +7,7 @@ defmodule Snitch.Seed.Taxonomy do
   alias Snitch.Repo
   alias Snitch.Tools.Helper.Taxonomy, as: TaxonomyHelper
 
+  """
   @product_category {
     "Pets",
     [
@@ -147,10 +148,28 @@ defmodule Snitch.Seed.Taxonomy do
       {"Neko Chan", []}
     ]
   }
+  """
+
+  @product_category {
+    "Roti & Kue",
+    [
+      {"Roti & Donat", []},
+      {"Cake & Bolu", []},
+      {"Snack & Kue Kering", []},
+      {"Pudding", []},
+    ]
+  }
+
+  @brands {
+    "Brands",
+    [
+      {"Kana's Pastry", []},
+    ]
+  }
 
   def seed do
     Repo.delete_all(Taxonomy)
     TaxonomyHelper.create_taxonomy(@product_category)
-    TaxonomyHelper.create_taxonomy(@brands)
+    #TaxonomyHelper.create_taxonomy(@brands)
   end
 end

@@ -23,7 +23,7 @@ defmodule SnitchApi.Mixfile do
   def application do
     [
       mod: {SnitchApi.Application, []},
-      extra_applications: [:logger, :runtime_tools, :sentry]
+      extra_applications: [:logger, :runtime_tools]
     ]
   end
 
@@ -57,7 +57,7 @@ defmodule SnitchApi.Mixfile do
 
       # html parser
       {:floki, "~> 0.20.0"},
-      {:sentry, "~> 7.0"},
+      #{:sentry, "~> 7.0"},
       {:jason, "~> 1.1"}
     ]
   end

@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "name": "Roti Pisang Coklat",
+      "description": "Roti dengan isi pisang manis dan coklat cair.",
+      "meta_description": "",
+      "meta_keywords": "",
+      "variants": [
+        {
+          "name": "roti pisang coklat",
+          "sku": "roti-pisang-coklat",
+          "weight": 0,
+          "height": 0,
+          "weight": 0,
+          "depth": 0,
+          "selling_price": 5000.0,
+          "cost_price": 4000.0,
+          "currency": "IDR"
+        }
+      ]
+    },
+    {
+      "name": "Roti Pisang Keju",
+      "description": "Roti dengan isi pisang manis dan keju cair.",
+      "meta_description": "",
+      "meta_keywords": "",
+      "variants": [
+        {
+          "name": "roti pisang keju",
+          "sku": "roti-pisang-keju",
+          "weight": 0,
+          "height": 0,
+          "weight": 0,
+          "depth": 0,
+          "selling_price": 5000.0,
+          "cost_price": 4000.0,
+          "currency": "IDR"
+        }
+      ]
+    }
+  ]
+}
