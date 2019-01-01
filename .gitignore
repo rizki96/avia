@@ -28,3 +28,10 @@ erl_crash.dump
 
 /vendor/
 /uploads/images/
+
+.idea/
+*.iml
+
+.DS_Store
+
+/apps/admin_app/assets/elm/

@@ -15,11 +15,17 @@ defmodule AdminAppWeb.Endpoint do
     at: "/",
     from: :admin_app,
     gzip: true,
-    only: ~w(css fonts images js favicon.png robots.txt)
+    only: ~w(css fonts images uploads js favicon.png robots.txt)
   )
 
   # Serve the images saved in the upload folder.
-  plug(Plug.Static, at: "/uploads", from: Path.expand('./uploads'), gzip: false)
+  plug(
+    Plug.Static, 
+    at: "/uploads", 
+    from: Path.expand('./uploads'), 
+    gzip: false,
+    only: ~w(images)
+  )
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
