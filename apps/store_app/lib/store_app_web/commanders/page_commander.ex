@@ -12,9 +12,9 @@ defmodule StoreAppWeb.PageCommander do
 
   # Drab Callbacks
   def page_loaded(socket) do
-    poke socket, welcome_text: "This page has been drabbed"
-    set_prop socket, "section.phx-hero p.lead",
-      innerHTML: "Please visit <a href='https://tg.pl/drab'>Drab</a> page for more examples and description"
+    #poke socket, welcome_text: "This page has been drabbed"
+    #set_prop socket, "section.jumbotron p.lead",
+    #  innerHTML: "Please visit <a href='https://tg.pl/drab'>Drab</a> page for more examples and description"
   end
   #
   # def page_loaded(socket) do

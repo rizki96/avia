@@ -1,0 +1,131 @@
+@import 'shared/scss/selected_theme_variables';
+:host {
+  width: 100%;
+}
+
+.desktop-query {
+  line-height: 0;
+  margin: 4px 10px 20px 0;
+  @media screen and(width: 768px) {
+    margin-left: -45px !important;
+    margin-right: 26px !important
+  }
+  input.desktop-search-bar {
+    width: 50%;
+    font-family: $primary-font;
+    display: inline-block;
+    font-size: 16px;
+    height: 20px;
+    line-height: 24px;
+    color: $gray-900;
+    box-sizing: content-box;
+    padding: 9px 10px 9px;
+    margin: 0;
+    outline: 0;
+    border: 1px solid $theme-main-color;
+    border-radius: 4px 0 0 4px;
+    border-right: 0;
+    background: $gray-200;
+    @media screen and(width: 768px) {
+      width:97.2% !important
+    }
+    &:focus,
+    &:focus+a.desktop-submit {
+      background-color: $white;
+      box-shadow: 0 0 3px -1px $theme-main-color + 50;
+    }
+  }
+  a.desktop-submit {
+    box-sizing: content-box;
+    display: inline-block;
+    height: 28px;
+    width: 5%;
+    text-align: center;
+    padding: 8px 10px 2px;
+    background: $gray-200;
+    border: 1px solid $theme-main-color;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    .desktop-iconSearch {
+      display: inline-block;
+    }
+    .sprites-search {
+      width: 21px;
+      height: 21px; // background-position: -284px -160px;
+    }
+    .web-sprite {
+      background: url(/assets/default/search-sprite.png);
+      background-position: -209px -148px; // background-size: 1404px 105px;
+      display: inline-block;
+    }
+  }
+}
+
+.themecolor {
+  color: $theme-main-color !important;
+}
+
+.desktop-query-updated {
+  background-color: $white;
+}
+
+@media screen and(min-width: 769px) and(max-width: 1024px) {
+  input.desktop-search-bar {
+    width: 75%;
+  }
+}
+
+.searchinput {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -47px;
+  background-color: $theme-main-color;
+  padding: 0px 7px 10px 7px;
+  .search-container {
+    border-radius: 4px;
+    background-color: $white;
+    .input.desktop-search-bar {
+      width: 100%;
+      border: 1px solid $theme-main-color;
+    }
+    .gobtn {
+      padding: 13px 9px 12px;
+      border-radius: 4px;
+      border: 0px;
+      background-color: $theme-action-sub-color1;
+    }
+  }
+}
+
+@media screen and(min-width: 320px) and(max-width: 768px) {
+  .desktop-query input.desktop-search-bar {
+    width: 78%;
+    border: 0px solid $theme-main-color;
+    border-radius: 4px 0px 0px 4px;
+  }
+  .desktop-query {
+    padding: 0px 7px 5.9px 4px;
+    margin-right: 4px;
+    margin-top: 2.2px;
+    margin-bottom: 0px;
+    margin-left: 0px; // @include border-radius($radius: 5px);
+    @include border-top-radius($radius: 5px);
+    border: 1px solid $theme-main-color;
+    a.desktop-submit {
+      color: $white;
+      height: 28px;
+      width: 21 px;
+      text-align: center;
+      font-size: 20px;
+      padding: 5px 5px 1px 5px;
+      background: transparent !important;
+      border: 0px solid $gray-10;
+      border-left: none;
+      border-radius: none;
+      .desktop-iconSearch {
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -9,6 +9,9 @@ import css from "../css/app.scss"
 //
 // Import dependencies
 //
+import $ from 'jquery'
+import jQuery from 'jquery'
+window.$ = jQuery;
 import "phoenix_html"
 
 // Import local files
@@ -17,3 +20,7 @@ import "phoenix_html"
 // import socket from "./socket"
 
 window.__socket = require("phoenix").Socket;
+
+window.setTimeout(function() {
+    $(".flash-alert").slideUp()
+}, 3000);
